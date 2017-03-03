@@ -3,7 +3,7 @@ class Kuroko2ReadOnly::ApplicationController < ActionController::Base
   include Kuroko2ReadOnly::RequestHandler
 
   protect_from_forgery with: :exception
-  before_action :require_sign_in
+  prepend_before_action :require_sign_in
 
   helper_method :current_user
 
