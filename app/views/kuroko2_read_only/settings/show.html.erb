@@ -1,0 +1,40 @@
+<%= content_for :title, 'Setting ReadOnly User' %>
+<%= content_for :content_title, 'Setting ReadOnly User' %>
+
+<% if flash[:success] %>
+<div class="alert alert-success">
+  <h4><%= flash[:success] %></h4>
+</div>
+<% end %>
+
+<%= form_tag settings_path, method: :put do %>
+<div class="box">
+  <div class="box-body table-responsive no-padding">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>ReadOnly</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <%= fields_for "users[]", user do |f| %>
+            <tr>
+              <td><%= user.id %></td>
+              <td><%= user.name %></td>
+              <td><%= user.email %></td>
+              <td><%= f.check_box :read_only %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="box-footer">
+    <%= submit_tag 'Submit', class: 'btn btn-default' %>
+  </div>
+</div>
+<% end %>
