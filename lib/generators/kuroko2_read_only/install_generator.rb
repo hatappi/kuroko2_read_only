@@ -6,13 +6,6 @@ module Kuroko2ReadOnly
     include ::Rails::Generators::Migration
 
     class_option(
-      :user_table_name,
-      type: :string,
-      default: 'users',
-      desc: 'If kuroko2 user table name change'
-    )
-
-    class_option(
       :default_read_only,
       type: :boolean,
       default: true,
