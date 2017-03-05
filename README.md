@@ -50,6 +50,7 @@ Or install it yourself as:
 
 - access `/kuroko2_read_only/settings`
 
+![](./examples/settings.jpeg)
 
 ## Contributing
 
