@@ -6,21 +6,13 @@ require 'kuroko2_read_only/version'
 Gem::Specification.new do |spec|
   spec.name          = "kuroko2_read_only"
   spec.version       = Kuroko2ReadOnly::VERSION
-  spec.authors       = ["yusaku.hatanaka"]
+  spec.authors       = ["hatappi"]
   spec.email         = ["hata.yusaku.1225@gmail.com"]
 
   spec.summary       = 'kuroko2 add readonly'
   spec.description   = 'kuroko2 add readonly'
   spec.homepage      = 'https://github.com/hatappi/kuroko2_read_only'
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
