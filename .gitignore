@@ -10,4 +10,5 @@
 
 ## dummy
 spec/dummy/db/test.sqlite3
+spec/dummy/log/test.log
 
